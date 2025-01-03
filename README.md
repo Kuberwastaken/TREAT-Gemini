@@ -1,6 +1,6 @@
 # TREAT-Gemini
 
-This is an experimental repository to port [TREAT](https://github.com/Kuberwastaken/TREAT) to use the Gemini 2.0 Flash model.
+This is an experimental repository to port [TREAT](https://github.com/Kuberwastaken/TREAT-CS50) to use the Gemini 2.0 Flash model.
 
 ## Setup Instructions
 
