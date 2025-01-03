@@ -1,0 +1,9 @@
+# Ignore virtual environment
+treat-env/
+treat-gemini/
+
+# Ignore __pycache__ folders
+__pycache__/
+
+# Ignore .env API Key
+treat\app\.env
