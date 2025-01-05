@@ -1,4 +1,4 @@
-![Treat_Banner](static\readme-images\New_Treat_Banner.png)
+![Treat_Banner](https://github.com/Kuberwastaken/TREAT-Gemini/blob/main/static/readme-images/New_Treat_Banner.png?raw=true)
 
 <h1 align="center">
   TREAT-Gemini
@@ -38,7 +38,7 @@ To use Gemini 2.0, generate an API key from Google AI Studio:
 
 2. Generate and copy your API key.
 
-   ![API Key Instructions](static\readme-images\instuctions.png)
+   ![API Key Instructions](https://github.com/Kuberwastaken/TREAT-Gemini/blob/main/static/readme-images/instuctions.png?raw=true)
 
 ### Step 2: Add the API Key to the Project
 1. Create a file named `.env` in the `treat/env` directory.
