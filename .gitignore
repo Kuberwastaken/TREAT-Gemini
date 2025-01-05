@@ -1,5 +1,4 @@
 # Ignore virtual environment
-treat-env/
 treat-gemini/
 
 # Ignore __pycache__ folders
