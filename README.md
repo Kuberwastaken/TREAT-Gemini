@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ![Treat_Banner](static\readme-images\New_Treat_Banner.png)
 
 <h1 align="center">
@@ -31,33 +30,20 @@ TREAT is a web application that uses natural language processing to analyze movi
     ```bash
    git clone https://github.com/Kuberwastaken/TREAT-Gemini.git
     ```
-=======
-# TREAT-Gemini
-
-This is an experimental repository to port [TREAT](https://github.com/Kuberwastaken/TREAT-CS50) to use the Gemini 2.0 Flash model.
-
-## Setup Instructions
->>>>>>> d342c7c575040025737ceb3bd5a10dff30a1914f
 
 ### Step 1: Generate Your API Key
 To use Gemini 2.0, generate an API key from Google AI Studio:
 
 1. Visit [Google AI Studio](https://aistudio.google.com/app/apikey).
-<<<<<<< HEAD
 
 2. Generate and copy your API key.
 
    ![API Key Instructions](static\readme-images\instuctions.png)
 
-=======
-2. Generate and copy your API key.
-
->>>>>>> d342c7c575040025737ceb3bd5a10dff30a1914f
 ### Step 2: Add the API Key to the Project
 1. Create a file named `.env` in the `treat/env` directory.
 2. Paste the following into the `.env` file:
 
-<<<<<<< HEAD
    ```
    API_KEY=your_generated_api_key_here
    ```
@@ -146,16 +132,10 @@ Adding new categories is as simple as specifying a new category under model.py a
 - **Inspiration:** I aimed for a simple and intuitive user experience, focusing on simplicity and ease of use. This decision stemmed from the need to create a tool that is easy to navigate for all users, regardless of background or age.
 
 - **Theme and Color Scheme:** The chosen theme and color scheme create a visually appealing and engaging environment. The chocolate and sweets theme is intended to stick to the TREAT theme and make the experience enjoyable and pleasant.
-=======
-```
-   API_KEY=your_generated_api_key_here
-```
->>>>>>> d342c7c575040025737ceb3bd5a10dff30a1914f
 
 ## Known Issues
 
 - **Accuracy Concerns:** Google Gemini Flash 2.0 currently achieves about **40% accuracy** on test cases, making it **unusable** as the main model.
-<<<<<<< HEAD
 
 - **Highly Limited Usage:** Google has API limits on the model (fairly so) as it's free.
 
@@ -171,12 +151,3 @@ I would like to thank:
 
 ## License
 This project is licensed under the [Apache 2.0 License](https://github.com/Kuberwastaken/TREAT-Gemini/blob/main/LICENSE).
-=======
-- **Highly Limited Usage:** Google has API limits on the model (fairly so) as it's free.
-
-## Seeking Contributions
-
-Improvements and optimizations are highly encouraged. If you have ideas to enhance accuracy or functionality, feel free to contribute via pull requests or by opening an issue.
-
-
->>>>>>> d342c7c575040025737ceb3bd5a10dff30a1914f
