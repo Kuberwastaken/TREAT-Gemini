@@ -1,21 +1,30 @@
 from flask import Flask
 from flask_cors import CORS
 import os
+import google.generativeai as genai
 
 # Get the absolute path for the template and static folders
 base_dir = os.path.abspath(os.path.dirname(__file__))
-template_dir = os.path.join(base_dir, "../../templates") # Path to the templates folder
-static_dir = os.path.join(base_dir, "../../static") # Path to the static folder
+template_dir = os.path.join(base_dir, "../../templates")
+static_dir = os.path.join(base_dir, "../../static")
 
-# Create an instance of the Flask class with the specified template and static folders
+# Initialize Flask app
 app = Flask(
     __name__,
     template_folder=template_dir,
     static_folder=static_dir
 )
 
-# Enable Cross-Origin Resource Sharing (CORS) for the app
+# Enable CORS
 CORS(app)
 
-# Import routes after initializing the Flask app to avoid circular import issues
+# Load Google API key and initialize Gemini
+try:
+    with open("google_api_key.txt", "r") as f:
+        api_key = f.read().strip()
+        genai.configure(api_key=api_key)
+except FileNotFoundError:
+    print("Warning: google_api_key.txt not found. Please ensure it exists before analyzing content.")
+
+# Import routes after initializing the Flask app
 from app import routes

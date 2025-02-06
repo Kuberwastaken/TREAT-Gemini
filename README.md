@@ -1,19 +1,17 @@
-![Treat_Banner](https://github.com/Kuberwastaken/TREAT-Gemini/blob/main/static/readme-images/New_Treat_Banner.png?raw=true)
+![Treat_Banner](static/images/readme-images/Treat_Banner.png)
 
 <h1 align="center">
-  TREAT-Gemini
+  Trigger Recognition for Enjoyable and Appropriate Television - Gemini 2.0 Thinking
 </h1>
 
 <p align="center">
-<img src="https://img.shields.io/static/v1?label=Kuberwastaken&message=TREAT-Gemini&color=pink&logo=github" alt="Kuberwastaken - TREAT">
-<img src="https://img.shields.io/badge/License-Apache_2.0-pink" alt="License Apache 2.0">
+<img src="https://img.shields.io/static/v1?label=Kuberwastaken&message=TREAT&color=daa3b2&logo=github" alt="Kuberwastaken - TREAT">
+<img src="https://img.shields.io/badge/version-Alpha-daa3b2" alt="Version Alpha">
 </p>
 
-This Experimental version of TREAT uses Google's Gemini 2.0 Flash model
-
-At this moment, this version is **NOT STABLE**
-
-## Project Description
+<h1 align="center">
+  NOTE: THIS VERSION'S DEVELOPMENT IS IN HIATUS UNTIL (AND IF) A MORE GENEROUS RATE LIMIT IS OFFERED BY GOOGLE
+</h1>
 
 I was tired of getting grossed out watching unexpected scenes in movies and TV and losing my appetite, that's why I created TREAT.
 
@@ -21,32 +19,27 @@ The goal of this project is to empower viewers by forewarning them about potenti
 
 TREAT is a web application that uses natural language processing to analyze movie and TV show scripts, identifying potential triggers to help viewers make informed choices.
 
-
 ## Installation Instructions
 ### Prerequisites
- - Star the Repository to Show Your Support.
+ - Star the Repository to Show Your Support (:P)
  - Clone the Repository to Your Local Machine:
 
     ```bash
    git clone https://github.com/Kuberwastaken/TREAT-Gemini.git
     ```
 
-### Step 1: Generate Your API Key
-To use Gemini 2.0, generate an API key from Google AI Studio:
+## Get Your Free API Key
+1. Go to [Google AI Studio](https://aistudio.google.com/apikey)
+2. Sign in with your Google account
+3. Click **Create API Key** in the left panel
+4. Name your key (e.g., "TREAT_DEV")
+5. Copy the generated key
 
-1. Visit [Google AI Studio](https://aistudio.google.com/app/apikey).
-
-2. Generate and copy your API key.
-
-   ![API Key Instructions](https://github.com/Kuberwastaken/TREAT-Gemini/blob/main/static/readme-images/instuctions.png?raw=true)
-
-### Step 2: Add the API Key to the Project
-1. Create a file named `.env` in the `treat/env` directory.
-2. Paste the following into the `.env` file:
-
-   ```
-   API_KEY=your_generated_api_key_here
-   ```
+🔒 **Security Setup (Recommended)**
+```bash
+# Linux/macOS
+export GEMINI_API_KEY="your_key_here"
+```
 
 ### Environment Setup
 To set up the development environment, you will need to create a virtual environment and install the necessary dependencies.
@@ -60,8 +53,8 @@ To set up the development environment, you will need to create a virtual environ
 2. Activate the Virtual Environment:
 
    ```bash
-   source treat-gemini/bin/activate   # On Unix or MacOS
-   treat-gemini\Scripts\activate      # On Windows
+   source treat-env/bin/activate   # On Unix or MacOS
+   treat-env\Scripts\activate      # On Windows
    ```
 
 3. Install Dependencies:
@@ -92,7 +85,7 @@ To set up the development environment, you will need to create a virtual environ
 
 - **app/routes.py:** Contains the Flask routes for handling script uploads.
 
-- **app/model.py:** Includes the script analysis functions using the gemini-2.0-flash-exp model.
+- **app/model.py:** Includes the script analysis functions using the Llama-3.2-1B model.
 
 - **templates/index.html:** The main HTML file for the web interface.
 
@@ -125,29 +118,24 @@ The TREAT application focuses on identifying a variety of potential triggers in 
 
 These categories help address a very real-world problem by forewarning viewers about potentially distressing content, enhancing their viewing experience.
 
-Adding new categories is as simple as specifying a new category under model.py and utils.py
+Adding new categories is as simple as specifying a new category under model.py and utils.py (no detailed prompts needed as it's a deep reasoning model)
 
-## Design Choices
+## Why Gemini 2.0 Thinking?
+✅ **Best Features**
+- **1M Token Context Window**: Process ~1,500 pages of text in a single request
+- **Free Tier Access**: Available through Google AI Studio with basic usage 
+- **Multimodal Understanding**: Analyzes text, images, and eventually audio/
+- **Enhanced Safety**: Built with self-critique RL and automated red 
+- **Cost Efficiency**: ~40k operations/$ in paid tiers (when scaled) 
 
-- **Inspiration:** I aimed for a simple and intuitive user experience, focusing on simplicity and ease of use. This decision stemmed from the need to create a tool that is easy to navigate for all users, regardless of background or age.
-
-- **Theme and Color Scheme:** The chosen theme and color scheme create a visually appealing and engaging environment. The chocolate and sweets theme is intended to stick to the TREAT theme and make the experience enjoyable and pleasant.
-
-## Known Issues
-
-- **Accuracy Concerns:** Google Gemini Flash 2.0 currently achieves about **40% accuracy** on test cases, making it **unusable** as the main model.
-
-- **Highly Limited Usage:** Google has API limits on the model (fairly so) as it's free.
-
-## Open Source Contribution
-This model is currently highly unstable with only 40% accuracy in the given test_files, any improvments to the model is highly encouraged!
+⚠️ **Current Limitations**
+- **Strict Rate Limits**: 60 QPM (queries per minute) in public preview 
+- **Output Restrictions**: 8k token response limit 
+- **Preview Limitations**: Some features like image analysis still in private preview 
 
 ## Acknowledgements
 I would like to thank:
 
-- Google: For developing the gemini-2.0-flash-exp model, a very critical component of this project.
+- Google : For developing and allowing access to the Gemini model, a very critical component of this project.
 
 - Parasite (2019): For that unexpected jumpscare that ruined my appetite and ultimately inspired this project.
-
-## License
-This project is licensed under the [Apache 2.0 License](https://github.com/Kuberwastaken/TREAT-Gemini/blob/main/LICENSE).

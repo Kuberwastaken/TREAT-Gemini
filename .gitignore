@@ -1,8 +1,8 @@
 # Ignore virtual environment
-treat-gemini/
+treat-gemini-thinking/
 
 # Ignore __pycache__ folders
 __pycache__/
 
-# Ignore .env API Key
-treat\app\.env
+# Ignore API Key
+google_api_key.txt
